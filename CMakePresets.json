@@ -7,7 +7,6 @@
       "generator": "Ninja Multi-Config",
       "binaryDir": "${sourceDir}/build/windows",
       "cacheVariables": {
-        "CMAKE_CXX_COMPILER": "cl",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
       },
       "condition": {
