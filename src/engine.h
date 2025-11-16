@@ -1,7 +1,7 @@
 #ifndef SRC_ENGINE_H_
 #define SRC_ENGINE_H_
 
-#include <pbr/pbr.h>
+#include "pbr_api.h"
 
 namespace pbr {
 
