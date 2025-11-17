@@ -2,5 +2,6 @@
 #define INCLUDE_PBR_H_
 
 #include <engine.h>
+#include <app.h>
 
-#endif
+#endif // INCLUDE_PBR_H_

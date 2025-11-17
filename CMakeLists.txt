@@ -7,7 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (MSVC)
-  add_compile_options(/FS)
+  add_compile_options(
+    /FS
+    /EHsc
+  )
 endif()
 
 include("cmake/libraries.cmake")
