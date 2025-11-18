@@ -16,4 +16,11 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glfw)
 
+FetchContent_Declare(
+  spdlog
+  GIT_REPOSITORY https://github.com/gabime/spdlog.git
+  GIT_TAG v1.16.0
+)
+FetchContent_MakeAvailable(spdlog)
+
 find_package(Vulkan REQUIRED)

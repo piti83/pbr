@@ -3,3 +3,8 @@ scripts/
 compile_commands.json
 .cache/
 .zed/
+TestResults/
+out/
+.vs/
+CMakeSettings.json
+

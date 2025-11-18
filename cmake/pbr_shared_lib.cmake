@@ -12,4 +12,5 @@ target_include_directories(pbr_shared_lib PUBLIC src)
 target_link_libraries(pbr_shared_lib PUBLIC
   glfw
   Vulkan::Vulkan
+  spdlog
 )
