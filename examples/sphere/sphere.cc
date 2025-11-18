@@ -19,6 +19,10 @@ class SphereApp : public pbr::App {
 };
 
 int main() {
+  pbr::Logger::Init();
+
+  pbr::Logger::Critical("{} {} {}", "this", "is", "critical");
+
   SphereApp sphere;
   sphere.Init();
   sphere.MainLoop();
