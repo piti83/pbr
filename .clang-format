@@ -6,7 +6,7 @@
 
 BasedOnStyle: Google
 Language: Cpp
-Standard: c++14
+Standard: c++20
 
 # Sort each #include block separately (if foo.cc includes foo.hpp on the top block, it can be preserved)
 IncludeBlocks: Preserve
