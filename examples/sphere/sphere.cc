@@ -21,7 +21,11 @@ class SphereApp : public pbr::App {
 int main() {
   pbr::Logger::Init();
 
-  pbr::Logger::Critical("{} {} {}", "this", "is", "critical");
+#if defined(DEBUG)
+  pbr::Logger::Info("Build mode: Debug");
+#elif defined(NDEBUG)
+  pbr::Logger::Info("Build mode: Release");
+#endif
 
   SphereApp sphere;
   sphere.Init();

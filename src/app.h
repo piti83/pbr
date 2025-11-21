@@ -1,11 +1,13 @@
 #ifndef SRC_APP_H_
 #define SRC_APP_H_
 
-#include "pbr_api.h"
 #include "display/window.h"
 #include "display/window_stats.h"
+#include "pbr_api.h"
 
 #include <vulkan/vulkan.h>
+
+#include <vector>
 
 namespace pbr {
 
@@ -29,6 +31,8 @@ class PBR_API App {
   ~App();
 
  private:
+  void SetLayersFlag();
+  bool CheckValidationLayers();
   void CreateAppInfo();
   void CreateInstanceCreationInfo();
   void CreateInstance();
@@ -38,6 +42,13 @@ class PBR_API App {
   VkInstance instance_;
   VkApplicationInfo app_info_;
   VkInstanceCreateInfo create_info_;
+
+  bool enable_validation_layers_;
+
+  // TODO: string_view instead of const char*
+ private:
+  const std::vector<const char*> validation_layers_ = {
+      "VK_LAYER_KHRONOS_validation"};
 };
 
 }  // namespace pbr
