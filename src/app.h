@@ -9,6 +9,9 @@
 
 #include <vector>
 
+#include <core/vulkan_context.h>
+#include <display/window.h>
+
 namespace pbr {
 
 class PBR_API App {
@@ -31,24 +34,8 @@ class PBR_API App {
   ~App();
 
  private:
-  void SetLayersFlag();
-  bool CheckValidationLayers();
-  void CreateAppInfo();
-  void CreateInstanceCreationInfo();
-  void CreateInstance();
-
- private:
   Window window_;
-  VkInstance instance_;
-  VkApplicationInfo app_info_;
-  VkInstanceCreateInfo create_info_;
-
-  bool enable_validation_layers_;
-
-  // TODO: string_view instead of const char*
- private:
-  const std::vector<const char*> validation_layers_ = {
-      "VK_LAYER_KHRONOS_validation"};
+  VulkanContext vulkan_context_;
 };
 
 }  // namespace pbr
