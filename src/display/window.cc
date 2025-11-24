@@ -57,13 +57,23 @@ void Window::Init() {
   }
 }
 
+
+
 GLFWwindow* Window::GetWindow() { return window_; }
+
+
 
 int Window::GetWidth() { return width_; }
 
+
+
 int Window::GetHeight() { return height_; }
 
+
+
 const char* Window::GetTitle() { return title_; }
+
+
 
 Window::~Window() {
   glfwDestroyWindow(window_);
@@ -71,5 +81,7 @@ Window::~Window() {
   glfwTerminate();
   Logger::Info("GLFW terminated.");
 }
+
+
 
 }  // namespace pbr

@@ -9,11 +9,15 @@
 
 namespace pbr {
 
+
+
 App::App() : window_(800, 600, "PBR") {}
+
 
 
 App::App(int window_width, int window_height, const char* window_title)
     : window_(window_width, window_height, window_title) {}
+
 
 
 void App::Init() {
@@ -22,9 +26,11 @@ void App::Init() {
 }
 
 
+
 void App::MainLoop() {
   while (!glfwWindowShouldClose(window_.GetWindow())) { glfwPollEvents(); }
 }
+
 
 
 WindowStats App::GetWindowStats() {
@@ -38,10 +44,13 @@ WindowStats App::GetWindowStats() {
 }
 
 
+
 void App::Shutdown() {}
 
 
+
 App::~App() {}
+
 
 
 }  // namespace pbr
