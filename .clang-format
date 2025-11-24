@@ -45,3 +45,5 @@ AllowShortEnumsOnASingleLine: false
 
 # Allow c-style casting style
 SpaceAfterCStyleCast: true
+
+SeparateDefinitionBlocks: Leave
